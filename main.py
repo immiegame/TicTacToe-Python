@@ -12,6 +12,7 @@ def DoGameLoop():
     if keepPlaying == 'y':
         print("STARTING AGAIN")
         print()
+        del Game # It is theoretically possible for someone to play the game so many times that it will consume all ram. This delete ensures infinite replayability
         DoGameLoop()
     elif keepPlaying == 'n':
         print('Thank you for playing! :)')
